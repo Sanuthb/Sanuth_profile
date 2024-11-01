@@ -1,19 +1,27 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import profile from "@/assets/profile/mee.jpg";
 import Image from "next/image";
 
 const BottomNav_comp = () => {
   const [isSticky, setIsSticky] = useState(false);
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) {
-      setIsSticky(true);
-    }
-    else {
-      setIsSticky(false);
-    }
-  });
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>

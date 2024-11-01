@@ -10,16 +10,16 @@ import Publication from "@/components/Profile_comp/Publication";
 import Service_comp from "@/components/Profile_comp/Service_comp";
 import Image from "next/image";
 import React from "react";
-import ads from "@/assets/profile/ads.png"
+import ads from "@/assets/profile/ads.png";
 
-const page = () => {
+const ProfilePage = () => {
   return (
     <div className="bg-black min-h-screen w-full relative">
       <div className="fixed z-10 top-0 left-0 w-full">
         <Prof_navbar />
       </div>
-      <BottomNav_comp/>
-      <div className="flex items-start w-full justify-center py-20  gap-3">
+      <BottomNav_comp />
+      <div className="flex items-start w-full justify-center py-20 gap-3">
         <div className="flex flex-col gap-2">
           <Main_prof />
           <About_comp />
@@ -31,11 +31,11 @@ const page = () => {
         <div className="flex flex-col gap-2">
           <Profile_settings />
           <Profile_view />
-            <Image src={ads} alt="ads" className="object-cover w-[20rem] rounded-lg"/>
+          <Image src={ads} alt="ads" className="object-cover w-[20rem] rounded-lg" />
         </div>
       </div>
     </div>
   );
 };
 
-export default page;
+export default ProfilePage;
