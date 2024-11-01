@@ -1,14 +1,14 @@
-import w2 from "@/assets/Works/Myworks/w2.jpg"
-import w3 from "@/assets/Works/Myworks/w3.png"
-import w4 from "@/assets/Works/Myworks/w4.png"
-import w1 from "@/assets/Works/Myworks/w1.png"
-import w5 from "@/assets/Works/Myworks/w5.png"
-import w6 from "@/assets/Works/Myworks/w6.png"
+import w2 from "../../assets/Works/Myworks/w2.jpg"
+import w3 from "../../assets/Works/Myworks/w3.png"
+import w4 from "../../assets/Works/Myworks/w4.png"
+import w1 from "../../assets/Works/Myworks/w1.png"
+import w5 from "../../assets/Works/Myworks/w5.png"
+import w6 from "../../assets/Works/Myworks/w6.png"
 
 export const items =[
     {
         id:"1",
-        category:"Client Projects",
+        category:"Client Projects"
         title:"BookMyTowing",
         description:"Street2Site transformed BookMyTowing's outdated website into a modern, user-friendly platform. We enhanced navigation, implemented responsive design, and streamlined the booking process, allowing users to request towing assistance effortlessly. This transformation improved their online presence, reflecting their commitment to reliability and significantly boosting user engagement.",
         image:w2,
