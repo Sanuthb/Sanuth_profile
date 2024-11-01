@@ -1,5 +1,5 @@
 import React from "react";
-import { Plus, Pen,ExternalLink } from "lucide-react";
+import { Plus, Pen, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 const Publication = () => {
@@ -41,7 +41,7 @@ const Publication = () => {
               management.
             </p>
             <p>
-              IoT-Based Solution: The "Automatic Irrigation System Using IoT" with
+              IoT-Based Solution: The &quot;Automatic Irrigation System Using IoT&quot; with
               Arduino ESP266 employs sensors (temperature, humidity, and soil
               moisture) to monitor soil conditions and automate irrigation,
               conserving water.

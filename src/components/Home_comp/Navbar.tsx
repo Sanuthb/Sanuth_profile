@@ -1,7 +1,6 @@
 import React from "react";
 import { ChevronLeft, ChevronRight, RotateCw, Blocks } from "lucide-react";
 import Profile_img from "./Profile_img";
-import Start_comp from "./Start_comp";
 import Navsearch_comp from "./Navsearch_comp";
 const Navbar = () => {
   return (
