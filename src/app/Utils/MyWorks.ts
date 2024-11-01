@@ -1,9 +1,9 @@
 import w2 from "../../assets/Works/Myworks/w2.jpg"
-import w3 from "../../assets/Works/Myworks/w3.png"
-import w4 from "../../assets/Works/Myworks/w4.png"
-import w1 from "../../assets/Works/Myworks/w1.png"
-import w5 from "../../assets/Works/Myworks/w5.png"
-import w6 from "../../assets/Works/Myworks/w6.png"
+import w3 from "../../assets/Works/Myworks/w3.jpg"
+import w4 from "../../assets/Works/Myworks/w4.jpg"
+import w1 from "../../assets/Works/Myworks/w1.jpg"
+import w5 from "../../assets/Works/Myworks/w5.jpg"
+import w6 from "../../assets/Works/Myworks/w6.jpg"
 
 export const items =[
     {
