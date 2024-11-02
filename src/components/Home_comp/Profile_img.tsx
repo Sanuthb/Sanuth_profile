@@ -3,18 +3,24 @@ import React, { useState } from "react";
 import profile from "@/assets/Home/profile.png";
 import Image from "next/image";
 import Link from "next/link";
-import {Linkedin,Instagram,Globe} from "lucide-react";
+import { Linkedin, Instagram, Globe } from "lucide-react";
 
-const Profile_img = () => {
+const Profile_img = ({style }: { style: boolean }) => {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
     <div className="relative">
       <button
-        className="cursor-pointer"
+        className={`cursor-pointer ${style ? "bg-white p-1 rounded-full":""}`}
         onClick={() => setIsClicked(!isClicked)}
       >
-        <Image src={profile} alt="Profile" className="w-8 h-8 rounded-full" />
+        <Image
+          src={profile}
+          alt="Profile"
+          className={` ${
+            style ?"w-10 h-10" : "w-8 h-8"
+          } rounded-full`}
+        />
       </button>
 
       {isClicked && (
@@ -28,22 +34,34 @@ const Profile_img = () => {
           <div className="bg-black h-1/2 rounded-md  z-10">
             <div className="flex items-center flex-col">
               <div>
-                <Image
-                  src={profile}
-                  alt="Profile"
-                  className="rounded-full"
-                />
+                <Image src={profile} alt="Profile" className="rounded-full" />
               </div>
               <div className="flex items-center flex-col pb-3">
                 <h3 className="text-xl font-medium text-white">
                   Sanuth Bibin B
                 </h3>
-                <p className="text-sm text-gray-400 text-center">Full Stack Developer | Freelancer | CFO of Street2Site</p>
+                <p className="text-sm text-gray-400 text-center">
+                  Full Stack Developer | Freelancer | CFO of Street2Site
+                </p>
               </div>
               <div className="p-5 flex gap-5">
-                <Link href="/pages/profile"  target="_blank" className=""><Linkedin/></Link>
-                <Link href="https://street2site.com/" target="_blank"  className=""><Instagram/></Link>
-                <Link href="https://street2site.com/" target="_blank" className=""><Globe/></Link>
+                <Link href="/pages/profile" target="_blank" className="">
+                  <Linkedin />
+                </Link>
+                <Link
+                  href="https://street2site.com/"
+                  target="_blank"
+                  className=""
+                >
+                  <Instagram />
+                </Link>
+                <Link
+                  href="https://street2site.com/"
+                  target="_blank"
+                  className=""
+                >
+                  <Globe />
+                </Link>
               </div>
             </div>
           </div>

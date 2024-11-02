@@ -22,7 +22,7 @@ const Bottom_nav = () => {
     },
     {
       title: "Youtube",
-      link: "/",
+      link: "https://www.youtube.com/",
       image: youtube,
     },
     {
