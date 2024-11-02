@@ -23,7 +23,7 @@ const Navbar = () => {
         <button className="p-2 hover:bg-gray-700 rounded-full">
           <Blocks size={18} />
         </button>
-        <Profile_img />
+        <Profile_img style={false} />
       </div>
     </div>
   );

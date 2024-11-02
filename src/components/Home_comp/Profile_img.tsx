@@ -11,7 +11,7 @@ const Profile_img = ({style }: { style: boolean }) => {
   return (
     <div className="relative">
       <button
-        className={`cursor-pointer ${style ? "bg-white p-1 rounded-full":""}`}
+        className={`cursor-pointer ${style ? "bg-white p-1 rounded-full":"bg-none p-0 rounded-none"}`}
         onClick={() => setIsClicked(!isClicked)}
       >
         <Image
