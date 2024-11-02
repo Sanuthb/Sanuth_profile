@@ -1,6 +1,5 @@
 import Bottom_nav from "@/components/Home_comp/Bottom_nav";
 import Navbar from "@/components/Home_comp/Navbar";
-import Search_comp from "@/components/Home_comp/Search_comp";
 import homebg from "@/assets/Home/home_bg.jpg";
 import React from "react";
 import Music_comp from "@/components/Home_comp/Music_comp";
