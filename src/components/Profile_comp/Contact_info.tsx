@@ -33,8 +33,8 @@ const Contact_info = () => {
         Contact Info
       </button>
       {isClicked && (
-        <div className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-35 flex items-center justify-center z-10">
-          <div className="bg-[#1b1f23] w-1/2  rounded-lg">
+        <div className="fixed top-10 left-0 w-full h-screen bg-black bg-opacity-35 flex items-center justify-center z-20">
+          <div className="bg-[#1b1f23] w-full  rounded-lg">
             <div className="p-5 flex justify-between border-b-2 border-gray-600">
               <h1 className="text-2xl">Sanuth B</h1>
               <button

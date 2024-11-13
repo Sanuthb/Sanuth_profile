@@ -8,9 +8,9 @@ interface items_props {
 }
 const Bottom_nav_item: React.FC<items_props> = ({ title, image, link }) => {
   return (
-      <Link href={link} className="flex w-fit gap-1">
-        <Image src={image} alt={title} width={5} height={5}  className="bg-white rounded-sm object-cover  w-4"/>
-        <span className="lg:text-xs">{title}</span>
+      <Link href={link} className="flex w-fit md:gap-1">
+        <Image src={image} alt={title} width={5} height={5}  className="bg-white rounded-sm object-cover w-5 md:w-4 md:block hidden"/>
+        <span className="md:text-xs text-xs ">{title}</span>
       </Link>
   );
 };

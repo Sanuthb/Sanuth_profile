@@ -1,8 +1,6 @@
 "use client"
 import React, { useState } from "react";
 import { Plus, Pen, MoveRight } from "lucide-react";
-import college from "@/assets/profile/college.jpg";
-import edu from "@/assets/profile/education.jpg";
 import Image from "next/image";
 
 const EducationComp = () => {
@@ -10,19 +8,19 @@ const EducationComp = () => {
 
   const items = [
     {
-      image: college,
+      image: '/assets/profile/college.jpg',
       title: "Christ Academy Institute for Advanced Studies",
       degree: "Bachelor's degree, Computer Science",
       year: "2024",
     },
     {
-      image: edu,
+      image: '/assets/profile/education.jpg',
       title: "Christ Academy Junior College",
       degree: "Higher Secondary Education, PCMC",
       year: "2021",
     },
     {
-      image: edu,
+      image: '/assets/profile/education.jpg',
       title: "St Francis ICSE School Hongasandra",
       degree: "Secondary Education",
       year: "2019",
@@ -32,7 +30,7 @@ const EducationComp = () => {
   const visibleItems = showAll ? items : items.slice(0, 2);
 
   return (
-    <div className="w-[50rem] bg-[#1b1f23] rounded-lg px-8 py-3">
+    <div className="w-full md:w-[50rem] bg-[#1b1f23] md:rounded-lg md:px-8 md:py-3 p-5">
       <div className="flex items-center justify-between text-white">
         <h1 className="text-xl font-semibold">Education</h1>
         <div className="flex gap-4">
@@ -51,7 +49,7 @@ const EducationComp = () => {
             className="flex gap-4 items-center border-b-2 w-full border-gray-700 pb-3"
           >
             <div className="flex-shrink-0">
-              <Image src={item.image} alt="" className="w-[3rem] h-[3rem]" />
+              <Image src={item.image} alt="" className="w-[3rem] h-[3rem]" width={100} height={0} />
             </div>
             <div className="mt-5">
               <div className="text-white font-semibold">{item.title}</div>

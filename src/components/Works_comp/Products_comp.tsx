@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import React from "react";
 interface product {
   title: string;
-  image: StaticImageData;
+  image: string;
 }
 interface product_items {
   title: string;
@@ -18,7 +18,7 @@ const Products_comp: React.FC<product_items> = ({ title,products }) => {
       <div className="grid grid-cols-2 gap-3 align-middle">
         {products.map((product, index) => (
           <div key={index}>
-            <Image src={product.image} alt={product.title} />
+            <Image src={product.image} alt={product.title} width={500} height={0} className="w-52"/>
             <h2 className="text-sm">{product.title}</h2>
           </div>
         ))}

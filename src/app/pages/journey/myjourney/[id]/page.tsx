@@ -2,7 +2,6 @@ import Journey_nav_comp from "@/components/Journey_comp/Journey_nav_comp";
 import Search_comp from "@/components/Journey_comp/Search_comp";
 import Image from "next/image";
 import React from "react";
-import imagenotfound from "@/assets/Journey/imagenotfound.jpg";
 import { myjourneys } from "@/app/Utils/Myjourney";
 
 const page = async ({ params }: { params: Promise<{ id: string }> }) => {
@@ -16,8 +15,10 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
         <div className="flex flex-col gap-5">
           <h1 className="text-2xl font-semibold">{journey?.title}</h1>
           <Image
-            src={journey?.image ?? imagenotfound}
+            src={journey?.image ?? '/assets/Journey/imagenotfound.jpg'}
             alt={journey?.title ?? "imagenotfound"}
+            width={1000}
+            height={0}
             className="h-[30rem] rounded-lg object-cover w-full"
           />
           <div className="flex justify-between p-4">

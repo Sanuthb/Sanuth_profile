@@ -1,8 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import logo from "@/assets/Journey/logo.png";
 import { Ellipsis, ShoppingCart, AlignJustify } from "lucide-react";
-import flag from "@/assets/Journey/flag.png";
 
 const Journey_nav_comp = () => {
   const intems = [
@@ -14,7 +12,7 @@ const Journey_nav_comp = () => {
   ];
   return (
     <div className="bg-white px-5 py-3 flex items-center justify-between">
-      <Image src={logo} alt="logo" className="w-28" />
+      <Image src='/assets/Journey/logo.png' width={100} height={0} alt="logo" className="w-28" />
       <div className="flex gap-4">
         {intems.map((item, index) => (
           <div key={index} className="flex gap-4 relative">
@@ -31,7 +29,7 @@ const Journey_nav_comp = () => {
         <Ellipsis />
       </button>
       <div>
-        <Image src={flag} alt="flags" className="w-7" />
+        <Image src='/assets/Journey/flag.png' alt="flags" className="w-7" width={300} height={0}/>
       </div>
       <h1>Rs</h1>
       <button className="text-blue-600 font-semibold text-lg">Sign in</button>

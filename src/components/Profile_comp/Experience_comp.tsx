@@ -1,15 +1,12 @@
 import React from "react";
-import { Pen, Plus,Gem } from "lucide-react";
-import exp from "@/assets/profile/experience.jpg";
+import { Pen, Plus, Gem } from "lucide-react";
 import Image from "next/image";
-import VTECH from "@/assets/profile/vtect.jpg";
-import Ekennis from "@/assets/profile/ekennis.jpg";
 import Link from "next/link";
 
 const Experience_comp = () => {
   const items = [
     {
-      image: exp,
+      image: "/assets/profile/experience.jpg",
       title: "Software Engineer",
       company: "Street2site · Freelance",
       duration: "Nov 2023 - Present · 1 yr",
@@ -19,7 +16,7 @@ const Experience_comp = () => {
       skills: "Cascading Style Sheets (CSS), WordPress and +13 skills",
     },
     {
-      image: exp,
+      image: "/assets/profile/experience.jpg",
       title: "Website Manager",
       company: "Achaar Gali · Part-time",
       duration: "Sep 2024 - Oct 2024 · 2 mos",
@@ -28,7 +25,7 @@ const Experience_comp = () => {
       skills: "Wordpress",
     },
     {
-      image: VTECH,
+      image: "/assets/profile/vtect.jpg",
       title: "Student Intern",
       company: "VTECH INTEGRATED SOLUTIONS · Internship",
       duration: "Mar 2024 - May 2024 · 3 mos",
@@ -38,7 +35,7 @@ const Experience_comp = () => {
       skills: "MERN Stack",
     },
     {
-      image: Ekennis,
+      image: "/assets/profile/ekennis.jpg",
       title: "Software Engineer",
       company: "Ekennis Software Service Limited · Self-employed",
       duration: "Aug 2023 - Nov 2023 · 4 mos",
@@ -48,7 +45,7 @@ const Experience_comp = () => {
       skills: "WordPress, HTML and +4 skills",
     },
     {
-      image: exp,
+      image: "/assets/profile/experience.jpg",
       title: "Student Intern",
       company: "Camplain Innovations · Internship",
       duration: "Dec 2022 - Feb 2023 · 3 mos",
@@ -60,7 +57,7 @@ const Experience_comp = () => {
   ];
 
   return (
-    <div className="w-[50rem] bg-[#1b1f23] rounded-lg px-8 py-3">
+    <div className="w-full md:w-[50rem] bg-[#1b1f23] md:rounded-lg md:px-8 md:py-3 p-5">
       <div className="flex items-center justify-between text-white">
         <h1 className="text-xl font-semibold">Experience</h1>
         <div className="flex gap-4">
@@ -74,31 +71,48 @@ const Experience_comp = () => {
       </div>
       <div>
         {items.map((item, index) => (
-          <div key={index} className="flex gap-4 py-4 border-b-2 w-full border-gray-700 ">
+          <div
+            key={index}
+            className="flex gap-2 md:gap-4 py-4 border-b-2 w-full border-gray-700 "
+          >
             <Image
               className="w-[3rem] h-[3rem] object-cover "
               src={item.image}
               alt="experience"
+              width={150}
+              height={0}
             />
             <div className="flex flex-col gap-1">
               <div className="text-lg font-semibold  text-white">
                 {item.title}
               </div>
-              <div className="text-base font-normal text-white ">
+              <div className="md:text-base font-normal text-white">
                 {item.company}
               </div>
-              <div className="text-base font-normal text-gray-400">
+              <div className="md:text-base font-normal text-gray-400 text-sm">
                 {item.duration}
               </div>
-              <div className="text-base font-normal text-gray-400">
+              <div className="md:text-base font-normal text-gray-400 text-sm">
                 {item.location}
               </div>
               <div className="text-white">
-                <p className="text-justify">{item.description}</p>
+                <p className="text-justify hidden md:block">
+                  {item.description}
+                </p>
+                <p className="text-sm block md:hidden">
+                  {item.description.length > 200
+                    ? item.description.slice(0, 100)+'...'
+                    : item.description}
+                </p>
               </div>
               <div className="mt-2 flex gap-2">
-                <Gem size={15} className="text-white"/>
-                <Link href="/pages/profile" className="text-white text-sm font-medium hover:text-blue-500 hover:underline">{item.skills}</Link>
+                <Gem size={15} className="text-white" />
+                <Link
+                  href="/pages/profile"
+                  className="text-white text-sm font-medium hover:text-blue-500 hover:underline"
+                >
+                  {item.skills}
+                </Link>
               </div>
             </div>
           </div>

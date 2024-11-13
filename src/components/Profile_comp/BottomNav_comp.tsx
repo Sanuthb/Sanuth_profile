@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import profile from "@/assets/profile/mee.jpg";
 import Image from "next/image";
 
 const BottomNav_comp = () => {
@@ -17,7 +16,6 @@ const BottomNav_comp = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup function to remove the event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -29,7 +27,9 @@ const BottomNav_comp = () => {
         <div className="flex w-full bg-[#1b1f23] py-2 px-20 fixed top-16 left-0 z-10 text-white items-center justify-between border-t-[.1rem] border-gray-600">
           <div className="flex gap-2">
             <Image
-              src={profile}
+              src='/assets/profile/mee.jpg'
+              width={50}
+              height={0}
               alt="Sanuth"
               className="object-cover rounded-full w-[2rem] h-[2rem]"
             />

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Publication = () => {
   return (
-    <div className="w-[50rem] bg-[#1b1f23] rounded-lg px-8 py-3 text-white">
+    <div className="w-full md:w-[50rem] bg-[#1b1f23] md:rounded-lg md:px-8 md:py-3 p-5 text-white">
       <div className="flex items-center justify-between text-white">
         <h1 className="text-xl font-semibold">Publication</h1>
         <div className="flex gap-4">
@@ -29,7 +29,7 @@ const Publication = () => {
         >
           Show publication <ExternalLink size={18}/>
         </Link>
-        <div className="flex flex-col gap-3 mt-4">
+        <div className="hidden md:flex flex-col gap-3 mt-4">
             <p>
               Importance of Agriculture: Agriculture forms the backbone of many
               economies, including India, contributing significantly to GDP and

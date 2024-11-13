@@ -1,7 +1,6 @@
 import React from 'react'
 import {Eye,Send} from 'lucide-react'
 import Image from 'next/image'
-import kishan from '@/assets/profile/k.jpg'
 
 const Profile_view = () => {
   return (
@@ -11,7 +10,7 @@ const Profile_view = () => {
             <p className='flex items-center gap-1 text-gray-400 text-sm'><Eye size={15}/> Private to you</p>
         </div>
         <div className='flex gap-2'>
-                <Image src={kishan} alt='kishan' className='w-[3rem] h-[3rem] object-cover rounded-full'/>
+                <Image src='/assets/profile/k.jpg' width={100} height={0} alt='kishan' className='w-[3rem] h-[3rem] object-cover rounded-full'/>
             <div className='flex flex-col gap-1'> 
                 <h1 className='font-semibold'>R Kishan</h1>
                 <p className='text-sm'>Software Engineer | Passionate about Building Scalable....</p>

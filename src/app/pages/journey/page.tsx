@@ -1,31 +1,27 @@
 import Journey_nav_comp from "@/components/Journey_comp/Journey_nav_comp";
 import React from "react";
 import Image from "next/image";
-import bgimage from "@/assets/Journey/bg.jpg";
 import Destination_comp from "@/components/Journey_comp/Destination_comp";
 import Myjourney from "@/components/Journey_comp/Myjourney";
-import myimage from "@/assets/Journey/mee.jpg"
-import goa from "@/assets/Journey/goa.jpg"
-import mumbai from "@/assets/Journey/mumbi.jpg"
 
 const page = () => {
 
     const items =[
         {
-            image:goa,
+            image:'/assets/Journey/goa.jpg',
             title:'Goa',
             description:'6,000 accommondations',
             link:'journey/',
         },
         {
-            image:myimage,
+            image:'/assets/Journey/mee.jpg',
             title:'My Journey',
             description:'10,000 accommondations',
             link:'journey/myjourney',
         },
        
         {
-            image:mumbai,
+            image:'/assets/Journey/mumbi.jpg',
             title:'Mumbai',
             description:'7,000 accommondations',
             link:'journey/',
@@ -38,7 +34,9 @@ const page = () => {
       <Journey_nav_comp />
       <div className="w-full ">
         <Image
-          src={bgimage}
+          src='/assets/Journey/bg.jpg'
+          width={1000}
+          height={0}
           alt="background"
           className="w-full h-[20rem] object-cover object-top"
         />

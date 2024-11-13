@@ -3,7 +3,6 @@ import Search_comp from "@/components/Journey_comp/Search_comp";
 import Image from "next/image";
 import React from "react";
 import { myjourneys } from "@/app/Utils/Myjourney";
-import mybg from "@/assets/Journey/mybackground.jpg";
 import Journey_card from "@/components/Journey_comp/Journey_card";
 import Filtercar_comp from "@/components/Journey_comp/Filtercar_comp";
 
@@ -15,7 +14,9 @@ const page = () => {
       <div className="p-4 w-full ">
         <div className="relative">
           <Image
-            src={mybg}
+            src='/assets/Journey/mybackground.jpg'
+            width={2000}
+            height={0}
             alt="mybackground"
             className="h-[25rem] object-cover rounded-lg "
           />

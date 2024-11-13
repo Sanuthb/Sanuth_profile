@@ -63,7 +63,7 @@ const Navsearch_comp = () => {
 
   return (
     <div
-      className={`flex-1 flex items-center bg-gray-800 px-2 py-1 max-w-full relative ${
+      className={` z-20 flex-1 flex items-center bg-gray-800 px-2 py-1 max-w-full relative ${
         searchclicked ? "rounded-tl-lg rounded-tr-lg" : "rounded-full"
       }`}
     >
@@ -99,6 +99,10 @@ const Navsearch_comp = () => {
           >
             <History size={15} className="text-gray-500" /> My Journey
           </Link>
+
+          <div className="flex items-center justify-end">
+            <button className="text-gray-500" onClick={()=>{setSearchClicked(false)}}>Close</button>
+          </div>
         </div>
       )}
     </div>

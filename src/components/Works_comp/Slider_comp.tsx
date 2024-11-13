@@ -1,27 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import banner1 from "@/assets/Works/banner1.jpg";
-import banner2 from "@/assets/Works/banner2.jpg";
-import banner3 from "@/assets/Works/banner3.jpg";
 import Image from "next/image";
 import { ArrowRight,ArrowLeft } from "lucide-react";
 import Products_comp from "./Products_comp";
-import p1 from "@/assets/Works/products/p1.jpg"
-import p2 from "@/assets/Works/products/p2.jpg"
-import p3 from "@/assets/Works/products/p3.jpg"
-import p4 from "@/assets/Works/products/p4.jpg"
-import p5 from "@/assets/Works/products/p5.jpg"
-import p6 from "@/assets/Works/products/p6.jpg"
-import p7 from "@/assets/Works/products/p7.jpg"
-import p8 from "@/assets/Works/products/p8.jpg"
-import p9 from "@/assets/Works/products/p9.jpg"
-import p10 from "@/assets/Works/products/p10.jpg"
-import p11 from "@/assets/Works/products/p11.jpg"
-import p12 from "@/assets/Works/products/p12.jpg"
-import p13 from "@/assets/Works/products/p13.jpg"
-import p14 from "@/assets/Works/products/p14.jpg"
-import p15 from "@/assets/Works/products/p15.jpg"
-import p16 from "@/assets/Works/products/p16.jpg"
 
 const Slider_comp = () => {
 
@@ -31,19 +12,19 @@ const Slider_comp = () => {
       products:[
         {
           title:"Air Conditioner",
-          image:p1
+          image:'/assets/Works/products/p1.jpg'
         },
         {
           title:"Refrigerators",
-          image:p2
+          image:'/assets/Works/products/p2.jpg'
         },
         {
           title:"Microwaves",
-          image:p3
+          image:'/assets/Works/products/p3.jpg'
         },
         {
           title:"Washing Machines",
-          image:p4
+          image:'/assets/Works/products/p4.jpg'
         },
       ]
     },
@@ -52,19 +33,19 @@ const Slider_comp = () => {
       products:[
         {
           title:"Starting ₹149 | BoAt",
-          image:p5
+          image:'/assets/Works/products/p5.jpg'
         },
         {
           title:"Starting ₹349 | boult",
-          image:p6
+          image:'/assets/Works/products/p6.jpg'
         },
         {
           title:"Starting ₹649 | Noise",
-          image:p7
+          image:'/assets/Works/products/p7.jpg'
         },
         {
           title:"Starting ₹149 | Zebronics",
-          image:p8
+          image:'/assets/Works/products/p8.jpg'
         },
       ]
     },
@@ -73,19 +54,19 @@ const Slider_comp = () => {
       products:[
         {
           title:"Womens Clothing",
-          image:p9
+          image:'/assets/Works/products/p9.jpg'
         },
         {
           title:"Footware+Handbags",
-          image:p10
+          image:'/assets/Works/products/p10.jpg'
         },
         {
           title:"Watches",
-          image:p11
+          image:'/assets/Works/products/p11.jpg'
         },
         {
           title:"Fashion Accessories",
-          image:p12
+          image:'/assets/Works/products/p12.jpg'
         },
       ]
     },
@@ -94,19 +75,19 @@ const Slider_comp = () => {
       products:[
         {
           title:"Home Storage & Organization",
-          image:p13
+          image:'/assets/Works/products/p13.jpg'
         },
         {
           title:"Storage & racks",
-          image:p14
+          image:'/assets/Works/products/p14.jpg'
         },
         {
           title:"Toys & Games",
-          image:p15
+          image:'/assets/Works/products/p15.jpg'
         },
         {
           title:"Jackets,dress & more",
-          image:p16
+          image:'/assets/Works/products/p16.jpg'
         },
       ]
     },
@@ -116,7 +97,7 @@ const Slider_comp = () => {
 
 
 
-  const banners = [banner1, banner2, banner3];
+  const banners = ['/assets/Works/banner1.jpg', '/assets/Works/banner2.jpg', '/assets/Works/banner3.jpg'];
   const [count, setCount] = useState(0);
 
   const previous = () => {
@@ -141,6 +122,8 @@ const Slider_comp = () => {
         src={banners[count]}
         alt="Amazon banner"
         className="w-full object-cover -z-10"
+        width={1000}
+        height={0}
         style={{
           WebkitMaskImage: "linear-gradient(to bottom, #000 50%, transparent)",
           maskImage: "linear-gradient(to bottom, #000 50%, transparent)",

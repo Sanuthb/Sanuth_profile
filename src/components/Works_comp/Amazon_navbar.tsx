@@ -1,20 +1,21 @@
 import Image from "next/image";
 import React from "react";
-import logo from "@/assets/Works/logo.png";
 import { MapPin, Search, ShoppingCart, ChevronDown } from "lucide-react";
-import flag from "@/assets/Works/flag.png";
+import Link from "next/link";
 
 const Amazon_navbar = () => {
   return (
     <div className="bg-[#131921] w-full py-2 px-2 text-white flex justify-between items-center">
-      <div className="flex items-center hover:border-2 hover:border-white cursor-pointer">
+      <Link href="/pages/works" className="flex items-center hover:border-2 hover:border-white cursor-pointer">
         <Image
-          src={logo}
+          src='/assets/Works/logo.png'
+          width={100}
+          height={0}
           alt="logo_image"
           className="object-cover w-[6rem] h-[3rem] "
         />
         .in
-      </div>
+      </Link>
       <div className="flex items-center hover:border-2 hover:border-white cursor-pointer">
         <MapPin className="text-gray-600" />
         <span className="text-sm text-gray-600">
@@ -40,7 +41,7 @@ const Amazon_navbar = () => {
         </button>
       </div>
       <div className="flex items-end hover:border-2 hover:border-white cursor-pointer">
-        <Image src={flag} alt="indian flag" className="w-[2rem] h-[2rem]" />
+        <Image src="/assets/Works/flag.png" width={100} height={0} alt="indian flag" className="w-[2rem] h-[2rem]" />
         <span className="font-bold flex items-end">EN <ChevronDown size={15}/></span>
       </div>
       <div className="hover:border-2 hover:border-white cursor-pointer">

@@ -23,6 +23,8 @@ const Suggestions_comp = () => {
             <Image
               src={item.image}
               alt={item.title}
+              width={500}
+              height={0}
               className="w-[20rem]  object-cover"
             />
             <div className="flex flex-col gap-2">

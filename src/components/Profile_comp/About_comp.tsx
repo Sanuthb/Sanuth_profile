@@ -1,17 +1,17 @@
 import React from "react";
 import { Pen } from "lucide-react";
+import About_edit from "./Profile_edit/About_edit";
 
 const About_comp = () => {
+
   return (
-    <div className="w-[50rem] bg-[#1b1f23] rounded-lg p-8">
+    <div className="w-full md:w-[50rem] bg-[#1b1f23] md:rounded-lg p-4 md:p-8">
       <div className="flex items-center justify-between text-white">
         <h1 className="text-xl font-semibold">About</h1>
-        <button className="hover:bg-[#2c2f33] p-2 rounded-full">
-          <Pen size={18} />
-        </button>
+        <About_edit/>
       </div>
-      <div className="flex flex-col gap-4 text-white mt-5 text-sm">
-        <p>
+      <div className="flex flex-col gap-4 text-white mt-5 text-sm ">
+        <p className="text-justify">
           In an increasingly digital landscape, businesses struggle to create
           efficient, user-friendly applications that meet evolving customer
           demands and drive engagement.

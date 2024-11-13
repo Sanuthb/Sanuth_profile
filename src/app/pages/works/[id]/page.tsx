@@ -1,7 +1,5 @@
 import React from "react";
 import { items } from "@/app/Utils/MyWorks";
-import Amazon_navbar from "@/components/Works_comp/Amazon_navbar";
-import Amazon_bottombar from "@/components/Works_comp/Amazon_bottombar";
 import Image from "next/image";
 import { MapPin } from "lucide-react";
 import Suggestions_comp from "@/components/Works_comp/Suggestions_comp";
@@ -12,8 +10,6 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
   return (
     <div className="bg-[#e3e6e6]">
-      <Amazon_navbar />
-      <Amazon_bottombar />
       <div className="p-5 flex items-center justify-center gap-10 bg-white">
         {product?.image ? (
           <Image
