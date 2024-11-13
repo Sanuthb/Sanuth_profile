@@ -14,11 +14,11 @@ const Edit_job = () => {
   ]);
 
   const [locations, setLocations] = useState(["Bengaluru, Karnataka, India"]);
-  const [locationTypes, setLocationTypes] = useState({
+  const locationTypes = {
     "On-site": true,
     Hybrid: true,
     Remote: true,
-  });
+  }
   const [isjobedit, setisjobedit] = useState(false);
   const [islocationsedit, setislocationsedit] = useState(false);
   const removeJobTitle = (title: string) => {

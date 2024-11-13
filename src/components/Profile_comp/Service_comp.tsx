@@ -1,5 +1,5 @@
 import React from "react";
-import { Pen, MoveRight } from "lucide-react";
+import { MoveRight } from "lucide-react";
 import Service_edit from "./Profile_edit/Service_edit";
 
 const Service_comp = () => {

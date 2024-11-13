@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { Pen, ShieldCheck, ExternalLink } from "lucide-react";
+import { ShieldCheck, ExternalLink } from "lucide-react";
 import Contact_info from "./Contact_info";
 import Link from "next/link";
 import Background_edit from "./Profile_edit/Background_edit";

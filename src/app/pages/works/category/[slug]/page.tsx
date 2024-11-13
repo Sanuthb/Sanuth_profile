@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
-  var category_name = (await params).slug;
+  let category_name = (await params).slug;
 
   category_name=category_name.replace('%20'," ")  
 

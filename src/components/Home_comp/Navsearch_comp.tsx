@@ -30,6 +30,7 @@ const Navsearch_comp = () => {
   );
 
   useEffect(() => {
+     // eslint-disable-next-line react-hooks/exhaustive-deps
     if (searchButtonClick) {
       const searchQuery = searcheditem.toUpperCase();
       const isPresent = items.includes(searchQuery);

@@ -2,11 +2,6 @@
 import {
   Pen,
   X,
-  Crop,
-  Blend,
-  SlidersHorizontal,
-  RotateCw,
-  RotateCcw,
   Square,
 } from "lucide-react";
 import React, { useCallback } from "react";

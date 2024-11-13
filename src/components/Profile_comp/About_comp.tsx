@@ -1,5 +1,4 @@
 import React from "react";
-import { Pen } from "lucide-react";
 import About_edit from "./Profile_edit/About_edit";
 
 const About_comp = () => {
