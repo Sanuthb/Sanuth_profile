@@ -42,21 +42,21 @@ const page = () => {
         />
       </div>
       <div className="flex items-center justify-center w-full h-36">
-        <div className="bg-[#f8f7f9] w-1/2 rounded-lg shadow-lg shadow-gray-400 p-10 flex flex-col gap-5">
-          <div className="flex gap-2 items-center">
+        <div className="bg-[#f8f7f9] md:w-1/2 rounded-lg shadow-lg shadow-gray-400 md:p-10 p-5 flex flex-col gap-5">
+          <div className="flex flex-col md:flex-row gap-2 items-center">
               <button className="p-2 bg-blue-100 border-2 border-blue-500 text-blue-500 rounded-2xl w-fit">
                 My Journey
               </button>
-              <h1 className="text-gray-400">Enter airport and no of travellers to see me </h1>
+              <h1 className="text-sm text-gray-400">Enter airport and no of travellers to see me </h1>
           </div>
           <div>
             <Destination_comp />
           </div>
         </div>
       </div>
-      <div className="mt-40 p-5 flex flex-col gap-5 ">
+      <div className="mt-44 md:mt-40 p-5 flex flex-col gap-5 ">
         <h1 className="text-2xl font-medium">Top destination in India</h1>
-        <div className="px-10 flex gap-10">
+        <div className="md:px-10 flex flex-col md:flex-row gap-10">
             <Myjourney items={items} />
         </div>
       </div>

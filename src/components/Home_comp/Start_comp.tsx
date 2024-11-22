@@ -10,7 +10,7 @@ const Start_comp = () => {
     };
 
     return (
-        <button className="p-2 hover:bg-gray-700 rounded-full" onClick={handleClick}>
+        <button className="p-2 hover:bg-gray-700 rounded-full hidden md:block" onClick={handleClick}>
             <Star size={16} style={{ color: isClicked ? "yellow" : "" }} />
         </button>
     );

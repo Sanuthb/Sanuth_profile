@@ -16,6 +16,7 @@ const Navsearch_comp = () => {
     "WORKS",
     "PROFILE",
     "JOURNEY",
+    "MYDOCS"
   ];
   const [searcheditem, setsearcheditem] = React.useState("");
   const [searchButtonClick, setSearchButtonClick] = React.useState(false);
@@ -30,7 +31,7 @@ const Navsearch_comp = () => {
   );
 
   useEffect(() => {
-     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     if (searchButtonClick) {
       const searchQuery = searcheditem.toUpperCase();
       const isPresent = items.includes(searchQuery);
@@ -55,6 +56,11 @@ const Navsearch_comp = () => {
           searchQuery === "JOURNEY")
       ) {
         window.location.href = "/pages/journey";
+      } else if (
+        isPresent &&
+        (searchQuery === "MYDOCS")
+      ) {
+        window.location.href = "/pages/docs";
       } else {
         alert("No results found for " + searchQuery);
       }
@@ -64,15 +70,24 @@ const Navsearch_comp = () => {
 
   return (
     <div
-      className={` z-20 flex-1 flex items-center bg-gray-800 px-2 py-1 max-w-full relative ${
+      className={` z-20 flex-1 flex items-center bg-gray-800 py-1 px-2 max-w-full relative ${
         searchclicked ? "rounded-tl-lg rounded-tr-lg" : "rounded-full"
       }`}
     >
-      <Search size={16} className="text-gray-400 mr-2" />
+      <Search size={16} className="hidden md:block text-gray-400 mr-2 " />
       <input
         type="text"
         placeholder="Search Google or type a URL"
-        className="bg-transparent w-full focus:outline-none text-sm"
+        className="hidden md:block bg-transparent w-full focus:outline-none text-sm"
+        onClick={() => setSearchClicked(true)}
+        onChange={(e) => setsearcheditem(e.target.value)}
+        value={searcheditem}
+        onKeyDown={handleKeyDown}
+      />
+      <input
+        type="text"
+        placeholder="Search..."
+        className=" md:hidden bg-transparent w-full focus:outline-none text-sm p-2"
         onClick={() => setSearchClicked(true)}
         onChange={(e) => setsearcheditem(e.target.value)}
         value={searcheditem}
@@ -80,7 +95,7 @@ const Navsearch_comp = () => {
       />
       <Start_comp />
       {searchclicked && (
-        <div className="absolute bg-gray-800 top-full left-0 h-[15rem] w-full z-10 rounded-bl-lg rounded-br-lg p-3 flex flex-col gap-5">
+        <div className="hidden md:absolute bg-gray-800 top-full left-0 h-[15rem] w-full z-10 rounded-bl-lg rounded-br-lg p-3 md:flex flex-col gap-5">
           <h1 className="text-gray-400 text-sm">click links below to view</h1>
           <Link
             href="/pages/profile"
@@ -102,7 +117,14 @@ const Navsearch_comp = () => {
           </Link>
 
           <div className="flex items-center justify-end">
-            <button className="text-gray-500" onClick={()=>{setSearchClicked(false)}}>Close</button>
+            <button
+              className="text-gray-500"
+              onClick={() => {
+                setSearchClicked(false);
+              }}
+            >
+              Close
+            </button>
           </div>
         </div>
       )}

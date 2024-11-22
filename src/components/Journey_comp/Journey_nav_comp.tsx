@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { Ellipsis, ShoppingCart, AlignJustify } from "lucide-react";
 
-const Journey_nav_comp = () => {
+const  Journey_nav_comp = () => {
   const intems = [
     { title: "Flight + Hotel", lable: "Bundel and save" },
     { title: "Hotel & Homes" },

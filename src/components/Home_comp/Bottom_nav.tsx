@@ -38,7 +38,7 @@ const Bottom_nav = () => {
 
   return (
     <div className="bg-gray-900 px-5 flex gap-5 justify-between">
-      <div className="flex gap-3">
+      <div className="hidden md:flex gap-3">
         {items.map((item, index) => {
           return (
             <div
@@ -54,7 +54,7 @@ const Bottom_nav = () => {
           );
         })}
       </div>
-      <div className="hidden lg:block">
+      <div className="hidden md:block">
         <Bookmark />
       </div>
     </div>

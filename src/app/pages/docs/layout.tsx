@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sanuth Bibin B",
-  description: "This is my profile",
+  title: "Sanuth Bibin B | docs ",
+  description: "This is my profile documentation",
 };
 
 export default function RootLayout({
@@ -14,7 +13,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <>
           {children}
+        </>
       </body>
     </html>
   );

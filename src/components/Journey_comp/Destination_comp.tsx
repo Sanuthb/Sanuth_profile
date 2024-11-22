@@ -53,8 +53,8 @@ const Destination_comp = () => {
           onKeyDown={handleKeyDown}
         />
       </div>
-      <div className=" flex gap-5 ">
-        <div className="bg-white border-2 border-gray-300 rounded-lg flex items-center justify-between w-1/2">
+      <div className=" flex flex-col md:flex-row gap-5 ">
+        <div className="bg-white border-2 border-gray-300 rounded-lg flex items-center justify-between w-full md:w-1/2">
           <div className="p-5 flex gap-4">
             <CalendarArrowUp className="text-gray-400" />
             {buttonclick && (
@@ -75,7 +75,7 @@ const Destination_comp = () => {
             </div>
           </div>
         </div>
-        <div className="bg-white border-2 border-gray-300 rounded-lg flex items-center  gap-10 justify-between w-1/2 p-5">
+        <div className="bg-white border-2 border-gray-300 rounded-lg flex items-center  gap-10 justify-between w-full md:w-1/2 p-5">
           <UsersRound className="text-gray-400" />
           <div>
             <h1 className="text-center">No travellers</h1>

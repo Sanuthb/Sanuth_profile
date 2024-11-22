@@ -1,9 +1,9 @@
+import Navbar from "@/components/Home_comp/Navbar";
 import type { Metadata } from "next";
-import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sanuth Bibin B",
-  description: "This is my profile",
+  title: "Sanuth Bibin B | Agoda ",
+  description: "This is my works",
 };
 
 export default function RootLayout({
@@ -14,7 +14,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <>
+          <Navbar />
           {children}
+        </>
       </body>
     </html>
   );

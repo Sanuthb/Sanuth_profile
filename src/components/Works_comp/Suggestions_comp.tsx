@@ -14,7 +14,7 @@ const Suggestions_comp = () => {
   return (
     <div className="p-3">
       <h1 className="text-2xl font-medium">Similar products</h1>
-      <div className="flex gap-10 mt-5">
+      <div className="flex flex-wrap gap-10 mt-5">
         {filtered_items.map((item, index) => (
           <div
             key={index}

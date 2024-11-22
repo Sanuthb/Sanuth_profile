@@ -12,7 +12,7 @@ const Navbar = () => {
         <button className="p-1 hover:bg-gray-700 rounded-full">
           <ChevronRight size={20} />
         </button>
-        <button className="p-1 hover:bg-gray-700 rounded-full">
+        <button className="p-1 hover:bg-gray-700 rounded-full hidden md:block">
           <RotateCw size={20} />
         </button>
       </div>
@@ -20,7 +20,7 @@ const Navbar = () => {
       <Navsearch_comp />
 
       <div className="flex items-center space-x-2">
-        <button className="p-2 hover:bg-gray-700 rounded-full">
+        <button className="p-2 hover:bg-gray-700 rounded-full hidden md:block">
           <Blocks size={18} />
         </button>
         <Profile_img style={false} />

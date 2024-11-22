@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { MapPin, Search, ShoppingCart, ChevronDown } from "lucide-react";
+import { MapPin, Search, ShoppingCart, ChevronDown} from "lucide-react";
 import Link from "next/link";
 
 const Amazon_navbar = () => {
@@ -36,7 +36,7 @@ const Amazon_navbar = () => {
           placeholder="Search in Amazon.in"
           className="outline-none text-black text-sm w-full"
         />
-        <button className="text-black bg-[#f3a847] p-2 rounded-r-md rounded-br-md">
+        <button className="text-black bg-[#febd69] p-2 rounded-r-md rounded-br-md">
           <Search size={18} />
         </button>
       </div>
@@ -58,6 +58,7 @@ const Amazon_navbar = () => {
         </span>
         <span className="text-sm font-bold">Cart</span>
       </div>
+ 
     </div>
   );
 };

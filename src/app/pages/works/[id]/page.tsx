@@ -10,22 +10,22 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
   return (
     <div className="bg-[#e3e6e6]">
-      <div className="p-5 flex items-center justify-center gap-10 bg-white">
+      <div className="p-5 flex flex-col md:flex-row items-center justify-center gap-10 bg-white">
         {product?.image ? (
           <Image
             src={product.image}
             alt={product.title}
-            className="w-1/3"
+            className="w-full  md:w-1/3"
             width={300}
             height={300}
           />
         ) : (
-          <div className="w-1/3 h-64 bg-gray-200 flex items-center justify-center">
+          <div className="w-full md:w-1/3 h-64 bg-gray-200 flex items-center justify-center">
             <span>No Image Available</span>
           </div>
         )}
-        <div className="w-1/3">
-          <p className="text-justify">{product?.description}</p>
+        <div className="w-full md:w-1/3">
+          <p className="text-sm md:text-lg text-justify">{product?.description}</p>
           <h1 className="text-xl font-bold mt-10">My Role: {product?.role}</h1>
           {product?.collabors && (
             <div>
