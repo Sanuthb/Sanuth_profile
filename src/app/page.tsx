@@ -9,7 +9,6 @@ const page = () => {
   return (
     <main className="h-screen text-white w-full  overflow-y-hidden relative">
       <Navbar />
-      <h1>hi</h1>
       <Bottom_nav />
       <Hero_section />
       <Read_doc/>
