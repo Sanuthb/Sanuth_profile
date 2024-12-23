@@ -1,20 +1,17 @@
 import React from "react";
-import { ChevronLeft, ChevronRight, RotateCw, Blocks } from "lucide-react";
+import { Blocks } from "lucide-react";
 import Profile_img from "./Profile_img";
 import Navsearch_comp from "./Navsearch_comp";
+import Reload from "./Reload";
+import BackRouter from "./BackRouter";
+import ForwardRouter from "./ForwardRouter";
 const Navbar = () => {
   return (
     <div className="flex items-center p-2 space-x-2 bg-gray-900 w-full text-white">
       <div className="flex items-center space-x-2">
-        <button className="p-1 hover:bg-gray-700 rounded-full">
-          <ChevronLeft size={20} />
-        </button>
-        <button className="p-1 hover:bg-gray-700 rounded-full">
-          <ChevronRight size={20} />
-        </button>
-        <button className="p-1 hover:bg-gray-700 rounded-full hidden md:block">
-          <RotateCw size={20} />
-        </button>
+        <BackRouter/>
+        <ForwardRouter/>
+        <Reload/>
       </div>
 
       <Navsearch_comp />

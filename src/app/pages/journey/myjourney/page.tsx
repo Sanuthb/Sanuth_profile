@@ -24,11 +24,11 @@ const page = () => {
           <div className="bg-black bg-opacity-35 absolute top-0 left-0 rounded-lg w-full h-full"></div>
         </div>
       </div>
-      <div className="bg-[#eff4fc] w-full h-screen p-10">
+      <div className="bg-[#eff4fc] w-full h-screen p-2 md:p-10">
         <h1 className="text-4xl font-medium"> Things We Will Be Exploring</h1>
         <div className="mt-10">
           <div className="flex gap-5">
-            <div>
+            <div className="hidden md:block">
               <Filtercar_comp/>
             </div>
             <div className="flex flex-wrap gap-5">

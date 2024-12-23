@@ -18,7 +18,7 @@ interface Journey_card_props {
 
 const Journey_card: React.FC<Journey_card_props> = ({ journey }) => {
   return (
-    <Link href={`myjourney/${journey.id}`} className="bg-white rounded-lg shadow-md shadow-gray-300 w-[20rem] border-2  border-gray-300">
+    <Link href={`myjourney/${journey.id}`} className="bg-white rounded-lg shadow-md shadow-gray-300 md:w-[20rem] border-2  border-gray-300">
       <Image src={journey.image} alt={journey.title} width={200} height={0} className="w-[20rem] h-[10rem] rounded-tl-lg rounded-tr-lg object-cover"/>
       <div className="flex flex-col p-4 gap-2">
         <h1 className="font-semibold text-xl">{journey.title}</h1>

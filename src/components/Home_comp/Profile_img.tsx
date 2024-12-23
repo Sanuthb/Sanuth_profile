@@ -46,7 +46,7 @@ const Profile_img = ({ style }: { style: boolean }) => {
               <div className="flex items-center flex-col pb-3">
                 <h3 className="text-xl font-medium text-white">Sanuth Bibin B</h3>
                 <p className="text-sm text-gray-400 text-center">
-                  Full Stack Developer | Freelancer | CFO of Street2Site
+                  Full Stack Developer | Freelancer | Co-Founder of Street2Site
                 </p>
               </div>
               <div className="p-5 flex gap-5">

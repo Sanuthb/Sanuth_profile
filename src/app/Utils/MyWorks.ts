@@ -51,6 +51,15 @@ export const items =[
         image:'/assets/Works/Myworks/w6.jpg',
         role:"Design and Development",
     },
+    {
+        id:"7",
+        category:"Client Projects",
+        title:"AI Bot Pdf Reader",
+        description:"With our real-time map tracking feature, users can view their current location and easily click anywhere on the map to generate a route. If friends join via a shared link, everyone can see each other’s locations and routes in real-time, enhancing collaboration and navigation during group outings or events.",
+        image:'/assets/Works/Myworks/w6.jpg',
+        role:"Design and Development",
+        collabors:["Kishan"],
+    },
 ]
 
 

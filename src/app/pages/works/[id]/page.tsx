@@ -3,6 +3,7 @@ import { items } from "@/app/Utils/MyWorks";
 import Image from "next/image";
 import { MapPin } from "lucide-react";
 import Suggestions_comp from "@/components/Works_comp/Suggestions_comp";
+import Add_to_cart from "@/components/Works_comp/Add_to_cart";
 
 const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const product_id = (await params).id;
@@ -51,11 +52,9 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
             <MapPin size={20} className="text-black" />
             Deliver to India
           </span>
-          <div className="flex flex-col gap-2">
-            <button className="bg-[#f7ca00] rounded-full p-2">
-              Add to Cart
-            </button>
-            <button className="bg-[#f7ca00] rounded-full p-2">Buy Now</button>
+          <div className="flex flex-col gap-2 ">
+            <Add_to_cart/>
+            
           </div>
           <div className="flex gap-2">
             <div className="flex flex-col gap-2">
